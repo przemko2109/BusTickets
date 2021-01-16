@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BusTickets.Models.Map>
+@{
+    ViewBag.Title = "Map";
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            Age
+        </th>
+        <th>
+            Route Id
+        </th>
+        <th>
+            Schedule Id
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                <p>@item.ExitCityId</p>
+            </td>
+            <td>
+                <p>@item.DestinationCityId</p>
+            </td>
+            <td>
+                <p>@item.Distance</p>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to the list", "Index")
+</div>
